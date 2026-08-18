@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise关键问题 - Promise then方法的特点</title>
+</head>
+<body>
+    <script>
+        // 特点：then方法返回的是一个Promise对象
+        // 对象状态：1.当抛出错误时，对象状态为rejected
+        // 2.当返回为非Promise对象时，对象状态为fullfilled
+        // 3.当返回为Promise对象时，对象状态取决于这个对象的状态
+        let p = new Promise((resolve, reject) => {
+            resolve('ok');
+        })
+        // 执行then方法
+        let result = p.then(value => {
+            // console.log(value);
+            // 1.抛出错误
+            // throw '出错了'
+            // 2.返回结果是非 Promise 类型
+            // return '521';
+            // 返回结果是Promise对象
+            return new Promise((resolve, reject) => {
+                // resolve('success');
+                reject('error')
+            })
+        }, reason => {
+            console.warn(reason);
+        })
+        console.log(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise关键问题 - Promise 状态与回调的先后执行顺序</title>
+</head>
+<body>
+    <script>
+        // 当改变状态为同步任务时，先改变状态后执行回调得到结果
+        // 当改变状态为异步任务时，先执行回调，后改变状态，改变状态时得到结果
+        let p = new  Promise((resolve, reject) => {
+            resolve('ok');
+        })
+        p.then(value => {
+            console.log(value);
+        }, reason => {
+            console.log(reason);
+        })
+    </script>
+</body>
+</html>
