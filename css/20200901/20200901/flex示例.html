@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex示例</title>
+</head>
+<style>
+    .father {
+        display: block;
+        height: 20;
+        width: 100%;
+        background-color: red;
+    }
+    .son1 {
+        margin-left: 12px;
+        width: 150px;
+        float: left;
+    }
+    .son2 {
+        /* position: absolute; */
+        margin-right: 56px;
+        background-color: red;
+        float: left;
+    }
+    .son3 {
+        /* position: absolute; */
+        /* box-sizing: border-box;
+        margin-left: auto;
+        padding-left: 2px; */
+        /* width: auto; */
+        /* width: 150px; */
+        left: 100px;
+        /* right: 100px; */
+        margin-right: 200px;
+        background-color: blue;
+        float: left;
+    }
+</style>
+<body>
+    <div class="father">
+        <div class="son1">我是雪球人one</div>
+        <div class="son2">我是雪球人two</div>
+        <div class="son3">我是雪球人three</div>
+    </div>
+</body>
+</html>
