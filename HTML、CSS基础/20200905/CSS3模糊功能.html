@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            height: 360px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        
+        div .xu {
+            /* width: 100%;
+            height: 100%; */
+            filter: blur(2px);
+            /* transition-duration: 0.3s; */
+            transition: all .3s;
+        }
+        
+        div .zhao {
+            position: absolute;
+            width: 483px;
+            height: 240px;
+        }
+        
+        div .xu:hover {
+            /* transform; */
+            /* background-image: url(image/赵露思.jpg); */
+            transform: scale(2);
+            filter: blur(0px);
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="zhao" src="image/赵露思.jpg" alt="">
+        <img class="xu" src="image/许嵩.jpg" alt="">
+    </div>
+</body>
+
+</html>
